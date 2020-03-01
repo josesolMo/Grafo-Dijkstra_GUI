@@ -27,7 +27,7 @@ Widget::~Widget()
 void Widget::on_send_clicked()
 {
     QTextStream T(mSocket);
-    T << ui->nickname->text() << ": " << ui->message->text();
+    T /**<< ui->nickname->text() << ": " **/<< ui->message->text();
     mSocket->flush();
     ui->message->clear();
 }
